@@ -24,7 +24,7 @@ public class MapPaths
         Lanes = 1;      
         Name = "";
         NodeID = new List<ulong>();
-        Height = UnityEngine.Random.Range(15.0f, 20.0f); //Adding the default height
+        Height = UnityEngine.Random.Range(45.0f, 50.0f); //Adding the default height
         ID = GetAttribute<ulong>(node.Attributes,"id");
         Visible = GetAttribute<bool>(node.Attributes,"visible");
 
