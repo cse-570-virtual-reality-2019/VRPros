@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Xml;
 using UnityEngine;
+using System.IO;
 
 class MapDataReader : MonoBehaviour
 {
@@ -20,10 +21,12 @@ class MapDataReader : MonoBehaviour
     {
         //MapBoundary mB = new MapBoundary();
         //groundPlane =PlaneCreator.Plane( mB.lenght,mB.width);
+        resourceFile = MapLocationHolder.FILENAME;
         nodes = new Dictionary<ulong, MapNodes>();
         ways = new List<MapPaths>();
         readXMLFile();
         IsReady = true;
+        
     }
 
     void Update()
