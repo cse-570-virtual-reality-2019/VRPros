@@ -5,6 +5,7 @@ using UnityEngine;
 abstract class MapInfra : MonoBehaviour
 {
     public MapDataReader map;
+  
    
     protected Vector3 GetCentre(MapPaths way)       //Getting the centre of a infrastructure
     {
@@ -30,11 +31,12 @@ abstract class MapInfra : MonoBehaviour
         GameObject gameObject = new GameObject(objectName);
         MeshFilter mfilter = gameObject.AddComponent<MeshFilter>();
         MeshRenderer mrenderer = gameObject.AddComponent<MeshRenderer>();
+        //gameObject.AddComponent<BoxCollider>();
         mrenderer.material = mat;
 
         Vector3 localOrigin = GetCentre(way);
         gameObject.transform.position = localOrigin - map.bounds.Centre;
-        if (objectName == "Road") {
+        if (objectName == "Road" || objectName=="Park") {
             gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 0.1f, gameObject.transform.position.z);
         }
         

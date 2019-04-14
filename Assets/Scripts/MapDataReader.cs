@@ -23,7 +23,7 @@ class MapDataReader : MonoBehaviour
         //MapBoundary mB = new MapBoundary();
         //groundPlane =PlaneCreator.Plane( mB.lenght,mB.width);
      
-        resourceFile = MapLocationHolder.FILENAME;
+       // resourceFile = MapLocationHolder.FILENAME;
         Debug.Log("INstart: "+resourceFile);
         nodes = new Dictionary<ulong, MapNodes>();
         ways = new List<MapPaths>();

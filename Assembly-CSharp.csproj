@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\LoadingAnim.cs" />
     <Compile Include="Assets\Scripts\MapBoundary.cs" />
     <Compile Include="Assets\Scripts\MapBuildingCreator.cs" />
+    <Compile Include="Assets\Scripts\MapCreatePark.cs" />
     <Compile Include="Assets\Scripts\MapDataReader.cs" />
     <Compile Include="Assets\Scripts\MapInfra.cs" />
     <Compile Include="Assets\Scripts\MapLocationHolder.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Assets\Scripts\MapPaths.cs" />
     <Compile Include="Assets\Scripts\MapRoadCreator.cs" />
     <Compile Include="Assets\Scripts\PlaneCreator.cs" />
+    <Compile Include="Assets\Scripts\PropManager.cs" />
     <None Include="Assets\Resources\rajivChowk.txt" />
     <None Include="Assets\Resources\28.699128.7091.txt" />
     <None Include="Assets\Resources\runtimeFile.txt" />

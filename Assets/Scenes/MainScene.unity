@@ -140,7 +140,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 2
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -367,6 +367,7 @@ GameObject:
   - component: {fileID: 1731342390}
   - component: {fileID: 1731342388}
   - component: {fileID: 1731342389}
+  - component: {fileID: 1731342391}
   m_Layer: 0
   m_Name: MapOutline
   m_TagString: Untagged
@@ -401,7 +402,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   map: {fileID: 0}
-  building: {fileID: 2100000, guid: 4af7ac734e8ebfd409b977137661e980, type: 2}
+  buildings:
+  - {fileID: 2100000, guid: 14554761983eb0a4b83052724fe6b5f7, type: 2}
+  - {fileID: 2100000, guid: eca99c9e501c1dd41b1bfc908c0c3aba, type: 2}
+  - {fileID: 2100000, guid: d6880165b20d47b4789dfd8c248eac37, type: 2}
+  - {fileID: 2100000, guid: 7fb3687b2d38c4c458ad5c0836a7a7fa, type: 2}
 --- !u!114 &1731342389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -432,3 +437,26 @@ MonoBehaviour:
   IsReady: 0
   resourceFile: runtimeFile
   test: 0
+--- !u!114 &1731342391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731342386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed36632e600d9064d9bc1ad6c10c400c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map: {fileID: 0}
+  Parkmat: {fileID: 2100000, guid: caa430f5e25380e4fb925c5f6b4fcc3c, type: 2}
+  v: 10
+  parkProps:
+  - {fileID: 134044, guid: cc84a7ed9371ee046acb8b2a86978276, type: 3}
+  - {fileID: 199184, guid: b0a5d7b42c92dff429f919cfa54bd0a4, type: 3}
+  - {fileID: 192044, guid: 19682540d8a014522a319b1cf788aee2, type: 3}
+  - {fileID: 191266, guid: c44bd9bdc114d4a60932c0087d9d1732, type: 3}
+  - {fileID: 188006, guid: c6b7fb383a3534b039692b5485b6e739, type: 3}
+  - {fileID: 137650, guid: 826b6a0b570e8460990010fa615b5a2a, type: 3}
+  probtospawnprop: 1

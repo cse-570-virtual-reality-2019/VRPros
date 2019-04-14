@@ -4,7 +4,7 @@ using UnityEngine;
 
 class MapBuildingCreator : MapInfra
 {
-    public Material building;
+    public Material[] buildings;
 
     IEnumerator Start()
     {
@@ -14,6 +14,8 @@ class MapBuildingCreator : MapInfra
             MapPaths way = map.ways[i];
             if (way.buildingExist && way.NodeID.Count > 1)
             {
+                int index = Random.Range(0, buildings.Length);
+                Material building = buildings[index];
                 CreateObject(way, building, "Building");        // Creating the object.
                 yield return null;
             }
