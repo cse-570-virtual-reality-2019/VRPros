@@ -5,11 +5,15 @@ using UnityEngine.UI;
 using UnityEngine.Networking;
 using System.IO;
 using UnityEngine.SceneManagement;
+using System.Globalization;
 
 public class GetLongLatEvent : MonoBehaviour
 {
     public InputField longText;
     public InputField latText;
+
+    public Toggle toggleLatLong;
+
 
     public Text errorText;
 
@@ -18,8 +22,13 @@ public class GetLongLatEvent : MonoBehaviour
     private string longitude, latitude;
     private string URL;
 
+    private bool flaglat;
+
     void Start() {
         background.SetActive(false);
+        if (toggleLatLong.isOn) {
+            flaglat = true;
+        }
     }
 
     public void getLongAndLat() {
@@ -44,6 +53,36 @@ public class GetLongLatEvent : MonoBehaviour
         }
 
     }
+
+    public void add(float d) {
+        string data;
+        float lati;
+        if (toggleLatLong.isOn)
+        {
+            data = latText.text;
+            if (data.Length == 0)
+            {
+                data = "0.0";
+            }
+            lati = float.Parse(data, CultureInfo.InvariantCulture.NumberFormat);
+
+            lati = lati + d;
+            data = "" + lati;
+            latText.text = data;
+        }
+        else {
+            data = longText.text;
+            if (data.Length == 0)
+            {
+                data = "0.0";
+            }
+            lati = float.Parse(data, CultureInfo.InvariantCulture.NumberFormat);
+            lati = lati + d;
+            data = "" + lati;
+            longText.text = data;
+        }
+    }
+
 
     IEnumerator StartDownload()
     {

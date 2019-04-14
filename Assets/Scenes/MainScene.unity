@@ -414,5 +414,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundPlane: {fileID: 1168758443}
-  IsReady: 0
+  IsReady: 1
   resourceFile: kashmeregate

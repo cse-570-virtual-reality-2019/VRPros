@@ -1,5 +1,11 @@
 ﻿/*Converting globe to a map
  * Source : https://wiki.openstreetmap.org/wiki/Mercator
+ * Most of OSM, including the main tiling system, uses a Pseudo-Mercator projection where the Earth is modelized as if it was a perfect a sphere.
+
+This produces a fast approximation to the truer, but heavier elliptical projection, where the Earth would be projected on a more accurate ellipsoid 
+(flattened on poles). As a consequence, direct mesurements of distances in this projection will be approximative, except on the Equator, and the aspect 
+ratios on the rendered map for true squares measured on the surface on Earth will slightly change with latitude and angles not so precisely preserved by
+this spherical projection.
  * */
 
 using System;
