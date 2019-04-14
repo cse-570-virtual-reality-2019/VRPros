@@ -366,6 +366,7 @@ GameObject:
   - component: {fileID: 1731342387}
   - component: {fileID: 1731342390}
   - component: {fileID: 1731342388}
+  - component: {fileID: 1731342389}
   m_Layer: 0
   m_Name: MapOutline
   m_TagString: Untagged
@@ -401,6 +402,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   map: {fileID: 0}
   building: {fileID: 2100000, guid: 4af7ac734e8ebfd409b977137661e980, type: 2}
+--- !u!114 &1731342389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731342386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50b50b7a67159ac4aa9a704d152a781d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map: {fileID: 0}
+  roadmat: {fileID: 2100000, guid: 5370185ae1ff51c448bdf94b7844a57a, type: 2}
 --- !u!114 &1731342390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -414,5 +429,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundPlane: {fileID: 1168758443}
-  IsReady: 1
-  resourceFile: kashmeregate
+  IsReady: 0
+  resourceFile: runtimeFile
+  test: 0

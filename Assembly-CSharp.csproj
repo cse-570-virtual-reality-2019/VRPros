@@ -70,9 +70,11 @@
     <Compile Include="Assets\Scripts\MapMercator.cs" />
     <Compile Include="Assets\Scripts\MapNodes.cs" />
     <Compile Include="Assets\Scripts\MapPaths.cs" />
+    <Compile Include="Assets\Scripts\MapRoadCreator.cs" />
     <Compile Include="Assets\Scripts\PlaneCreator.cs" />
     <None Include="Assets\Resources\rajivChowk.txt" />
     <None Include="Assets\Resources\28.699128.7091.txt" />
+    <None Include="Assets\Resources\runtimeFile.txt" />
     <None Include="Assets\Resources\Jaipur.txt" />
     <None Include="Assets\Resources\11.251711.2617.txt" />
     <None Include="Assets\Resources\kashmeregate.txt" />

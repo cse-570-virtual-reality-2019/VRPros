@@ -47,7 +47,7 @@ public class GetLongLatEvent : MonoBehaviour
             MapLocationHolder holder = new MapLocationHolder();
             holder.calLongLat();
             URL = "https://api.openstreetmap.org/api/0.6/map?bbox="+holder.getminlongitde()+","+holder.getminimumlatitude()+","+holder.getmaxlongitude()+","+holder.getmaxlatitude();
-            MapLocationHolder.FILENAME = holder.getminimumlatitude() + holder.getmaxlatitude();
+            MapLocationHolder.FILENAME ="runtimeFile";
 
             StartCoroutine(StartDownload());
         }
@@ -89,7 +89,7 @@ public class GetLongLatEvent : MonoBehaviour
         string url = URL;
         background.SetActive(true);
         string fileSavePath = Path.Combine(Application.dataPath, "Resources");
-       fileSavePath = Path.Combine(fileSavePath,MapLocationHolder.FILENAME);
+       fileSavePath = Path.Combine(fileSavePath,MapLocationHolder.FILENAME+".txt");
 
         //Create Directory if it does not exist
         if (!Directory.Exists(Path.GetDirectoryName(fileSavePath)))
@@ -105,7 +105,10 @@ public class GetLongLatEvent : MonoBehaviour
         yield return uwr.SendWebRequest();
 
         if (uwr.isNetworkError || uwr.isHttpError)
-            Debug.Log(uwr.error);
+        { Debug.Log(uwr.error);
+            errorText.text = "Network Error";
+            yield return null;
+        }
         else
             Debug.Log("Download saved to: " + fileSavePath.Replace("/", "\\") + "\r\n" + uwr.error);
 
