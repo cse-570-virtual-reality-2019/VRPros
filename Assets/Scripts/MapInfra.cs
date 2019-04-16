@@ -36,10 +36,13 @@ abstract class MapInfra : MonoBehaviour
 
         Vector3 localOrigin = GetCentre(way);
         gameObject.transform.position = localOrigin - map.bounds.Centre;
-        if (objectName == "Road" || objectName=="Park") {
-            gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 0.1f, gameObject.transform.position.z);
+        if (objectName == "Road") {
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 0.001f, gameObject.transform.position.z);
         }
-        
+        if (objectName == "Park")
+        {
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 0.0009f, gameObject.transform.position.z);
+        }
         List<Vector3> normals, vectors;
         List<Vector2> xys = new List<Vector2>();
         List<int> indices = new List<int>();

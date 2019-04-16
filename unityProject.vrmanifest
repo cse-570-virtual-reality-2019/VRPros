@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.generatingvrenviromentfrommaps.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\yogesh18140\\Documents\\Generating VR Enviroment from Maps\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "Generating VR Enviroment from Maps [Testing]"
+        }
+      }
+    }
+  ]
+}
