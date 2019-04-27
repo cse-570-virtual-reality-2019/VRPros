@@ -11,6 +11,7 @@ public class GetLongLatEvent : MonoBehaviour
 {
     public InputField longText;
     public InputField latText;
+    public string SceneName;
 
     public Toggle toggleLatLong;
 
@@ -112,6 +113,6 @@ public class GetLongLatEvent : MonoBehaviour
         else
             Debug.Log("Download saved to: " + fileSavePath.Replace("/", "\\") + "\r\n" + uwr.error);
 
-        SceneManager.LoadScene("MainScene", LoadSceneMode.Single);
+        SceneManager.LoadScene(SceneName, LoadSceneMode.Single);
     }
 }

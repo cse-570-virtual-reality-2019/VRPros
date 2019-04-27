@@ -16,9 +16,9 @@ public class MapLocationHolder : MonoBehaviour
     private string minLong;
     private string maxLong;
 
-    private float latdiff = 0.005f;
+    public float latdiff = 0.010f;
 
-    private float longdiff = 0.010f;
+   public float longdiff = 0.020f;
     public void calLongLat() {
         float minlong, minlat, maxlong, maxlat, lon, lat;
         lon = float.Parse(LONGITUDE, CultureInfo.InvariantCulture.NumberFormat);

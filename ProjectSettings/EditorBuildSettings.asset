@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 6ac9901466531984d9aed30f0b7ea516
+  - enabled: 1
+    path: Assets/Scenes/FirstSceneVR.unity
+    guid: dd2400da9711e494a9aa5176f188a0d7
+  - enabled: 1
+    path: Assets/Scenes/MainSceneVR.unity
+    guid: 5e5b5f5d539eee542b7fe38f0373ad61
   m_configObjects: {}

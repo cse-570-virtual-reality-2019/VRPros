@@ -11,12 +11,14 @@ public class InputLaserPointerVR : MonoBehaviour
     public SteamVR_Input_Sources handType;
     public SteamVR_Behaviour_Pose controllerPose;
     public SteamVR_Action_Boolean interactUI;
+    public float fireRate = 0.5f;
 
     public GameObject laserPrefab; // 1
     private GameObject laser; // 2
     private Transform laserTransform; // 3
     private Vector3 hitPoint; // 4
 
+    private float timeDifference;
     // 1
     public Transform cameraRigTransform;
     // 2
@@ -38,6 +40,7 @@ public class InputLaserPointerVR : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        timeDifference = Time.time;
         // 1
         laser = Instantiate(laserPrefab);
         // 2
@@ -65,8 +68,11 @@ public class InputLaserPointerVR : MonoBehaviour
 )
             {
                 hitPoint = hit.point;
-                ShowLaser(hit);
-
+                if (Mathf.Abs(timeDifference - Time.time) >= fireRate)
+                {
+                    ShowLaser(hit);
+                    timeDifference = Time.time;
+                }
                 // 1
                 reticle.SetActive(true);
                 // 2
@@ -100,7 +106,9 @@ public class InputLaserPointerVR : MonoBehaviour
         laserTransform.localScale = new Vector3(laserTransform.localScale.x,
                                                 laserTransform.localScale.y,
                                                 hit.distance);
-        Teleport(hit.transform.gameObject);
+     
+            Teleport(hit.transform.gameObject);
+      
     }
 
     private void Teleport(GameObject obj)
@@ -116,9 +124,17 @@ public class InputLaserPointerVR : MonoBehaviour
         // 5
         //cameraRigTransform.position = hitPoint + difference;
         Debug.Log("Button pressed");
-        Button clickHandler = obj.GetComponent<Button>();
-        clickHandler.onClick.Invoke();
-        //clickHandler.OnPointerClick(pointerEventData);
+        if (obj.tag == "toggle")
+        {
+            Toggle toggle = obj.GetComponent<Toggle>();
+            toggle.isOn = !toggle.isOn;
+        }
+        else
+        {
+            Button clickHandler = obj.GetComponent<Button>();
+            clickHandler.onClick.Invoke();
+        }
+            //clickHandler.OnPointerClick(pointerEventData);
 
     }
 }
