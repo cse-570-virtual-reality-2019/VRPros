@@ -5,6 +5,8 @@ using UnityEngine;
  class MapRoadCreator : MapInfra
 {
     public Material roadmat;
+    public GameObject[] parkProps;
+    public float probtospawnprop;
     protected override void OnObjectCreated(List<Vector3> normals, List<Vector2> xys, List<int> indices, MapPaths way, Vector3 origin, List<Vector3> vectors)
     {
         MapNodes point1, point2;
@@ -67,7 +69,26 @@ using UnityEngine;
         foreach (var way in map.ways.FindAll((w) => { return w.roadExist; }))
         {
             CreateObject(way, roadmat, "Road");
+            spawnProps(way);
             yield return null;
+        }
+    }
+    void spawnProps(MapPaths ways)
+    {
+        Vector3 position = Vector3.zero;
+        for (int i = 0; i < ways.NodeID.Count; i++)
+        {
+            var index = ways.NodeID[i];
+            position = map.nodes[index];
+            Vector3 center = map.bounds.Centre;
+            float genre = Random.Range(0.0f, 1.0f);
+            if (genre < probtospawnprop)
+            {
+                int propid = Random.Range(0, parkProps.Length);
+                GameObject prefab = parkProps[propid];
+                Vector3 pos = position - center;
+                Instantiate(prefab, pos, Quaternion.identity);
+            }
         }
     }
 

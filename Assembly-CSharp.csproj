@@ -60,11 +60,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Low Poly Animated People\RandomAnimationPicker.cs" />
     <Compile Include="Assets\Scripts\ActionTestVR.cs" />
     <Compile Include="Assets\Scripts\GetLongLatEvent.cs" />
     <Compile Include="Assets\Scripts\InputLaserPointerVR.cs" />
     <Compile Include="Assets\Scripts\LaserPointerVR.cs" />
     <Compile Include="Assets\Scripts\LoadingAnim.cs" />
+    <Compile Include="Assets\Scripts\LoadPreviousScene.cs" />
     <Compile Include="Assets\Scripts\MapBoundary.cs" />
     <Compile Include="Assets\Scripts\MapBuildingCreator.cs" />
     <Compile Include="Assets\Scripts\MapCreatePark.cs" />
@@ -75,13 +77,22 @@
     <Compile Include="Assets\Scripts\MapNodes.cs" />
     <Compile Include="Assets\Scripts\MapPaths.cs" />
     <Compile Include="Assets\Scripts\MapRoadCreator.cs" />
+    <Compile Include="Assets\Scripts\MapWaterbodyCreator.cs" />
     <Compile Include="Assets\Scripts\PlaneCreator.cs" />
     <Compile Include="Assets\Scripts\PropManager.cs" />
     <None Include="Assets\Resources\rajivChowk.txt" />
     <None Include="Assets\Resources\28.699128.7091.txt" />
+    <None Include="Assets\Resources\ny.txt" />
+    <None Include="Assets\Resources\chennai.txt" />
     <None Include="Assets\Resources\runtimeFile.txt" />
+    <None Include="Assets\Resources\dubai.txt" />
+    <None Include="Assets\Resources\delhi.txt" />
     <None Include="Assets\Resources\Jaipur.txt" />
+    <None Include="Assets\Resources\tokyo.txt" />
+    <None Include="Assets\Resources\miami.txt" />
+    <None Include="Assets\Resources\bangalore.txt" />
     <None Include="Assets\Resources\11.251711.2617.txt" />
+    <None Include="Assets\Best Sports CARS - Pro 3D Models\README.txt" />
     <None Include="Assets\Resources\kashmeregate.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/yogesh18140/Desktop/VRPros/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

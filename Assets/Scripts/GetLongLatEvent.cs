@@ -84,6 +84,10 @@ public class GetLongLatEvent : MonoBehaviour
         }
     }
 
+    public void LoadSavedCity(string cityName) {
+        MapLocationHolder.FILENAME = cityName;
+        SceneManager.LoadScene(SceneName, LoadSceneMode.Single);
+    }
 
     IEnumerator StartDownload()
     {
@@ -113,6 +117,13 @@ public class GetLongLatEvent : MonoBehaviour
         else
             Debug.Log("Download saved to: " + fileSavePath.Replace("/", "\\") + "\r\n" + uwr.error);
 
+        StartCoroutine(Delay());
         SceneManager.LoadScene(SceneName, LoadSceneMode.Single);
+    }
+    IEnumerator Delay()
+    {
+        print(Time.time);
+        yield return new WaitForSeconds(5);
+        print(Time.time);
     }
 }

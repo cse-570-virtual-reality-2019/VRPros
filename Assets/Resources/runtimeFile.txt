@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<osm version="0.6" generator="CGImap 0.6.1 (11637 thorn-03.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
- <bounds minlat="-78.0040100" minlon="22.8970000" maxlat="-77.9840000" maxlon="22.9370000"/>
+<osm version="0.6" generator="CGImap 0.6.1 (24044 thorn-01.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+ <bounds minlat="29.9910000" minlon="-77.0210000" maxlat="30.0110000" maxlon="-76.9810000"/>
 </osm>

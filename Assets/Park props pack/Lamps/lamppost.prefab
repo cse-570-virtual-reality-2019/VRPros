@@ -112,7 +112,7 @@ Transform:
   - {fileID: 492568}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &3377482
 MeshFilter:
   m_ObjectHideFlags: 0

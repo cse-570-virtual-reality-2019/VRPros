@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using System.Globalization;
 
-public class MapLocationHolder : MonoBehaviour
+public class MapLocationHolder 
 {
     public static string LONGITUDE;
     public static string LATITUDE;

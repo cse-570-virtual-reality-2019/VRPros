@@ -43,6 +43,10 @@ abstract class MapInfra : MonoBehaviour
         {
             gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 0.0009f, gameObject.transform.position.z);
         }
+        if (objectName == "WaterBody")
+        {
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 0.0008f, gameObject.transform.position.z);
+        }
         List<Vector3> normals, vectors;
         List<Vector2> xys = new List<Vector2>();
         List<int> indices = new List<int>();

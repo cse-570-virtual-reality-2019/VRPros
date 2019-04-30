@@ -23,7 +23,7 @@ class MapDataReader : MonoBehaviour
         //MapBoundary mB = new MapBoundary();
         //groundPlane =PlaneCreator.Plane( mB.lenght,mB.width);
      
-       // resourceFile = MapLocationHolder.FILENAME;
+       resourceFile = MapLocationHolder.FILENAME;
         Debug.Log("INstart: "+resourceFile);
         nodes = new Dictionary<ulong, MapNodes>();
         ways = new List<MapPaths>();
@@ -53,7 +53,7 @@ class MapDataReader : MonoBehaviour
     void readXMLFile()                          //Reading the xml file
     {
         var txtAsset = Resources.Load<TextAsset>(resourceFile);
-        Debug.Log("FILE is " + txtAsset);
+        Debug.Log("FILE is " + txtAsset+ "Name is "+resourceFile);
         XmlDocument doc = new XmlDocument();
         doc.LoadXml(txtAsset.text);
         getVariousAttributes(doc);

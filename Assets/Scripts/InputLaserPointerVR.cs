@@ -72,6 +72,8 @@ public class InputLaserPointerVR : MonoBehaviour
                 {
                     ShowLaser(hit);
                     timeDifference = Time.time;
+
+               
                 }
                 // 1
                 reticle.SetActive(true);
@@ -80,7 +82,6 @@ public class InputLaserPointerVR : MonoBehaviour
                 // 3
                 shouldTeleport = true;
 
-         
             }
         }
         else // 3

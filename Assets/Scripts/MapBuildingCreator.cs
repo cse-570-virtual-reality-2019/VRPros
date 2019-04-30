@@ -5,7 +5,8 @@ using UnityEngine;
 class MapBuildingCreator : MapInfra
 {
     public Material[] buildings;
-
+    public GameObject[] people;
+    public float peopleSpawnProb; 
     IEnumerator Start()
     {
         while (map.IsReady==false)  yield return null;
@@ -17,11 +18,30 @@ class MapBuildingCreator : MapInfra
                 int index = Random.Range(0, buildings.Length);
                 Material building = buildings[index];
                 CreateObject(way, building, "Building");        // Creating the object.
+                spawnPeople(way);
                 yield return null;
             }
         }
     }
+    void spawnPeople(MapPaths ways) {
+        Vector3 position = Vector3.zero;
 
+        for (int i = 0; i < ways.NodeID.Count; i++) {
+            var index = ways.NodeID[i];
+            position = map.nodes[index];
+            Vector3 center = map.bounds.Centre;
+            float guess = Random.Range(0.0f, 1.0f);
+            if (guess < peopleSpawnProb) {
+                int id = Random.Range(0, people.Length);
+                    GameObject prefab = people[id];
+                    Vector3 pos = position - center;
+                    pos.x += Random.Range(-10.0f, 20.0f);
+                Instantiate(prefab, pos, Quaternion.identity);
+            }
+            }
+
+        }
+    
     protected override void OnObjectCreated(List<Vector3> normals, List<Vector2> xys, List<int> indices,MapPaths way, Vector3 origin, 
         List<Vector3> vectors)
     {
